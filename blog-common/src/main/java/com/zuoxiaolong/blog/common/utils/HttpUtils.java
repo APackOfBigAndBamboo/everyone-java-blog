@@ -101,6 +101,7 @@ public interface HttpUtils {
             if (method.equals("GET") && !CollectionUtils.isEmpty(params)) {
                 url = url + "?" + stringBuffer.substring(0, stringBuffer.length() - 1);
             }
+            System.out.println(url);
             HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
             connection.setDoOutput(true);
             connection.setDoInput(true);
